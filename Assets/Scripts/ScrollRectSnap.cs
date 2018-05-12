@@ -29,6 +29,11 @@ public class ScrollRectSnap : MonoBehaviour {
 	private int minBtnNum;
 	private int btnLength;
 	 
+
+	private float screenWidthInPoints;
+	private int centreToEdge;
+
+
 	// Use this for initialization
 	void Start () {
 		// Get the total amount of buttons
@@ -40,10 +45,17 @@ public class ScrollRectSnap : MonoBehaviour {
 		float posBtn_0 = btn [0].GetComponent<RectTransform>().anchoredPosition.x;
 		float posBtn_1 = btn [1].GetComponent<RectTransform>().anchoredPosition.x;
 		btnDistance = (int)Mathf.Abs(posBtn_1 - posBtn_0);
+
+		// distance fom center to last button 
+		centreToEdge = Screen.width / 2 + btnDistance;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+ 
+		//@Todo add keyDown listener for space key to start the level
+		//@Todo left-right arrows listener to navigate the levels
 
 		for (int i = 0; i < btn.Length; i++) {
 			float centerPos = center.GetComponent<RectTransform>().position.x;
@@ -51,7 +63,7 @@ public class ScrollRectSnap : MonoBehaviour {
 			distReposition[i] =  centerPos - btnPos;
 			distance [i] = Mathf.Abs (distReposition[i]);
 
-			if (distReposition [i] > 1000) {
+			if (distReposition [i] > centreToEdge) {
 				float curX = btn [i].GetComponent<RectTransform> ().anchoredPosition.x;
 				float curY = btn [i].GetComponent<RectTransform> ().anchoredPosition.y;
 
@@ -59,7 +71,7 @@ public class ScrollRectSnap : MonoBehaviour {
 				btn [i].GetComponent<RectTransform> ().anchoredPosition = newAnchoredPos;
 			}
 
-			if (distReposition [i] < -1000) {
+			if (distReposition [i] < -centreToEdge) {
 				float curX = btn [i].GetComponent<RectTransform> ().anchoredPosition.x;
 				float curY = btn [i].GetComponent<RectTransform> ().anchoredPosition.y;
 

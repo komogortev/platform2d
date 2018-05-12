@@ -6,7 +6,6 @@ public class SoundManager : MonoBehaviour {
 	private static bool isMute;
  
 	public void ToggleMute () {
-		print (isMute);
 		isMute = !isMute;
 		AudioListener.volume = isMute ? 0 : 1;
 	}

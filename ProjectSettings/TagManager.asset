@@ -8,6 +8,8 @@ TagManager:
   - Decoration
   - Object
   - Runner
+  - Enemy
+  - ExitGate
   layers:
   - Default
   - TransparentFX
