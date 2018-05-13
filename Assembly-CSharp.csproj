@@ -59,7 +59,6 @@
      <Compile Include="Assets\Scripts\playerController.cs" />
      <Compile Include="Assets\Scripts\ScrollRectSnap.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />
-     <Compile Include="Assets\Store\Char_CtrlS.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files (x86)/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
