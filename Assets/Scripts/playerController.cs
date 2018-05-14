@@ -14,36 +14,29 @@ public class playerController : MonoBehaviour {
 
 	public float maxSpeed = 10f;
 	public float jumpForce = 700.0f;
-	//public float forwardMovementSpeed = 5.0f;
-	//private float calculatedSpeed;
 
 	private bool grounded;
 	private float groundRadius = 0.1f;
 	public Transform groundCheckTransform;
 	public LayerMask groundCheckLayerMask;
 
-	//private bool idle = true;
 	bool facingRight = true;
-
 
 	Animator animator;
 
 	void Start () {
 		//Fetch the RigidBody from the GameObject
 		playerRigidbody2D = GetComponent<Rigidbody2D>();
-
 		animator = GetComponent<Animator>();
 	}
 	
 	void Update () {
-		
 		 //Execute Jump mechanics
 		if (grounded && (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))) {
 			animator.SetBool("grounded", false);
 			playerRigidbody2D.AddForce(new Vector2(0, jumpForce));
 
 		}
-
 	}
 
 	void FixedUpdate () {

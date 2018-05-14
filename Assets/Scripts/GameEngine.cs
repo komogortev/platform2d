@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class GameEngine : MonoBehaviour {
 	 
 	//Game Stats
-	private int lifes;
-	public Text lifeCount;
-	public LevelManager levelManager;
+	//private int lifes;
+	public GameObject[] lifes;
+	public LevelsManager levelsManager;
 
 	private int totalScore;
 	public Text totalScoreCount;
@@ -21,18 +21,21 @@ public class GameEngine : MonoBehaviour {
 
 	void Start () {
 		Time.timeScale = 0.5f; 
-		lifes = 3;
+		//lifes = 3;
 		score = 0;
 		totalScore = PlayerPrefs.GetInt ("TotalScore");
 		//exitLevelText.text = "";
 
-		SetLifeCountText ();
+		//SetLifeDisplay ();
 		SetScoreCountText ();
 		  
+
+
+		Debug.Log (lifes[0].GetType());
 	}
 	 
 	void FixedUpdate () { 
-		if (lifes == 0) {
+		if (lifes.Length == 0) {
 			SetExitLevelText ("You lost");
 			totalScore += score;
 			SetTotalScoreCountText ();
@@ -43,8 +46,16 @@ public class GameEngine : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other) {
 		//Execute collision scenarios
 		if (other.gameObject.CompareTag("Enemy")) {
-			lifes = --lifes;
-			SetLifeCountText ();
+			//lifes = --lifes;
+
+			Destroy (lifes[lifes.Length - 1]);
+			var newAray = new GameObject[lifes.Length - 1];
+			for (var i = 0; i < lifes.Length - 1; i++)
+				newAray [i] = lifes [i];
+
+			lifes = newAray;
+
+			SetLifeDisplay ();
 		}  
 
 		if (other.gameObject.CompareTag("Object")) {
@@ -74,8 +85,9 @@ public class GameEngine : MonoBehaviour {
 		Debug.Log ("total " + PlayerPrefs.GetInt ("TotalScore", totalScore).ToString());
 	}
 
-	void SetLifeCountText () {
-		lifeCount.text = "Count: " + lifes.ToString();
+	void SetLifeDisplay () {
+
+
 	}
 
 	void SetExitLevelText (string msg) {
@@ -86,7 +98,7 @@ public class GameEngine : MonoBehaviour {
 		Time.timeScale = 0; 
 		yield return new WaitForSecondsRealtime (2);
 		Time.timeScale = 1;
-		levelManager.LoadScene ("_Main");
+		levelsManager.LoadScene ("_Main");
 	}
 }
 
