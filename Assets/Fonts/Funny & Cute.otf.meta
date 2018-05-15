@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: cb2041adea43b8d4195c65a2f7efa2b9
+timeCreated: 1526350930
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Funny & Cute
+  fontNames:
+  - Funny & Cute
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: bbbcdd0fd1a9104419b6170ac8ab4995, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

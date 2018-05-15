@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4377294610129440}
   - component: {fileID: 212952781999799192}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Hip_wear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4619722674553640}
   - component: {fileID: 212341794047669480}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Thigh_wear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4338064560003490}
   - component: {fileID: 212854849042536918}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Foot_wear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4995464362285026}
   - component: {fileID: 212238663412012188}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4920793049656748}
   - component: {fileID: 212770891513562288}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Hand_wear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4689048225218052}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4698147802314212}
   - component: {fileID: 212838748392656026}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Finger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4130494301774500}
   - component: {fileID: 212536254630483780}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: mouth_open
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4980771207514050}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Weapon_Slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4074242742249196}
   - component: {fileID: 212131468987008582}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4493684137845966}
   - component: {fileID: 212234483373051596}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body_wear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4951689622287042}
   - component: {fileID: 212507141624252868}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Foot_wear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4921492305883444}
   - component: {fileID: 212756157344460018}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: eyes_close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 212441766876184948}
   - component: {fileID: 61078274856013924}
   - component: {fileID: 114895412321582464}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4552725527245480}
   - component: {fileID: 212536063352803926}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Face_wrinkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4638066762796162}
   - component: {fileID: 212295116910243234}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,7 +297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4513799196900276}
   - component: {fileID: 212928355037604298}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: eyes_open
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4717274800010724}
   - component: {fileID: 212356547205286922}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4904260346001374}
   - component: {fileID: 212629050614286320}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,9 +345,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4975693981412098}
   - component: {fileID: 212975331687719290}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -361,7 +361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4035214051292528}
   - component: {fileID: 212893551189033156}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4623669037980914}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4270098419274812}
   - component: {fileID: 212524258523641604}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,7 +407,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4680721572171282}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Weapon_Slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4130373148259594}
   - component: {fileID: 212696370049327686}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Shoulder_wear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -439,7 +439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4973603619410232}
   - component: {fileID: 212813671347144440}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Leg_wear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4373032371271554}
   - component: {fileID: 212814255687826602}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4991747511133498}
   - component: {fileID: 212609738138306240}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Arm_wear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -502,7 +502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4828204135292232}
   - component: {fileID: 212371143107917412}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -518,7 +518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4179709351759916}
   - component: {fileID: 212803783566378884}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Leg_wear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,7 +534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4379048495265740}
   - component: {fileID: 212186973102388466}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Finger_wear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,7 +550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4003787326490998}
   - component: {fileID: 212310953841131316}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,7 +566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4520612325804410}
   - component: {fileID: 212204608999006506}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Finger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,7 +582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4978931263211482}
   - component: {fileID: 212378979330868312}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -598,7 +598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4248209447394872}
   - component: {fileID: 212518542066140164}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: mouth_hurt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -614,7 +614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4519221811439888}
   - component: {fileID: 212514304663149094}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Finger_wear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -630,7 +630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4575242215504408}
   - component: {fileID: 212361397543397276}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -646,7 +646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4981608411329042}
   - component: {fileID: 212385875598930908}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_eyebrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -662,7 +662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4612719167280462}
   - component: {fileID: 212715468082447902}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -678,9 +678,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4872785334811138}
   - component: {fileID: 212872465573856382}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Hip
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -694,7 +694,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4193372980387220}
   - component: {fileID: 212481104860857086}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_eyebrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -710,7 +710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4457772787259822}
   - component: {fileID: 212596518009237304}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -726,7 +726,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4791105853368080}
   - component: {fileID: 212478435437397638}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -742,7 +742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4167256655338264}
   - component: {fileID: 212661656731690988}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +758,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4117293008472352}
   - component: {fileID: 212602909900055004}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: L_Arm_wear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -774,7 +774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4520880012444966}
   - component: {fileID: 212810753331142128}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -790,7 +790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4622033051028730}
   - component: {fileID: 212621754270506908}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Thigh_wear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -806,7 +806,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4282735437157194}
   - component: {fileID: 212349276795197040}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: R_Hand_wear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1600,8 +1600,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5495ff59ca17af043992ff87248aee0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeCount: {fileID: 0}
-  levelManager: {fileID: 0}
+  lifes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  levelsManager: {fileID: 0}
   totalScoreCount: {fileID: 0}
   scoreCount: {fileID: 0}
   exitLevelText: {fileID: 0}
@@ -1655,13 +1658,14 @@ MonoBehaviour:
   - {fileID: 1894614850050260, guid: 8cd7a6f3310f5e745b13b800a6e887ec, type: 2}
   - {fileID: 1115876235231938, guid: cb621a9ca1454c445b7ed275982ee3b8, type: 2}
   availablePrefabObjects:
-  - {fileID: 1599042951481172, guid: fe2ee20502dbce148852050852e14b27, type: 2}
-  - {fileID: 1399944835952710, guid: be0ec1297fb0cd64f877f3e8bae338ac, type: 2}
-  exitGatePrefab: {fileID: 1621743539429058, guid: 58932b5879a863243b7aed4c4cabb71d,
-    type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  exitGatePrefab: {fileID: 0}
   currentSceneRooms:
   - {fileID: 0}
   decors:
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

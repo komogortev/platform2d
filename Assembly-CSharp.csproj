@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\ScrollRectSnap.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />
      <None Include="Assets\Sprites\_Gui\ColorfulButtons\Credits.txt" />
+     <None Include="Assets\Fonts\license.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files (x86)/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
