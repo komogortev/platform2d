@@ -6,17 +6,30 @@ using UnityEngine.SceneManagement;
  
 public class LevelsManager : MonoBehaviour {
 
+
+
 	//	public GameObject loadingImage;
-	public Text totalScoreCount;
+	//public Text totalScoreCount;
+
+	public float autoLoadNextLevelAfter;
+
 	private bool isMenu = true;
+	private bool isSettingsVisible = false;
 
 	void Start () {
-		if (SceneManager.GetActiveScene().name == "_Main") {
-			totalScoreCount.text = "Scores: " + PlayerPrefs.GetInt("TotalScore").ToString();
-			Debug.Log ("AA" + totalScoreCount.text);
+		if (SceneManager.GetActiveScene().name == "00 Splash") {
+			Invoke ("LoadMainMenu", autoLoadNextLevelAfter); 	
+
+			//totalScoreCount.text = "Scores: " + PlayerPrefs.GetInt("TotalScore").ToString();
+			//Debug.Log ("AA" + totalScoreCount.text);
 		}
+
+
 	}
-	  
+	   
+	public void LoadMainMenu(){
+		SceneManager.LoadScene ("_Main");
+	}
 
 	public void LoadScene(string level){
 		//loadingImage.SetActive (true);
@@ -24,6 +37,16 @@ public class LevelsManager : MonoBehaviour {
 	}
 		
 
+	public void ToggleSettings () {
+		isSettingsVisible = !isSettingsVisible;
+
+		//find objects that move
+		GameObject systemMenu = GameObject.Find ("SystemMenu");
+		Vector3 menuMarker = new Vector3 (250, 120, 0);
+		Vector3 sysMenuMarker = new Vector3 (250, 400, 0);
+
+		StartCoroutine(SlideMenu(systemMenu, isSettingsVisible == true ? menuMarker : sysMenuMarker, .2f));
+	}
 
 	//Toggle to Character room
 	public void ToggleRoom () {
