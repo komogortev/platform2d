@@ -8,7 +8,7 @@ public class GameEngine : MonoBehaviour {
 	 
 	//Game Stats
 	//private int lifes;
-	public GameObject[] lifes;
+ 	public GameObject[] lifes;
 	public LevelsManager levelsManager;
 
 	private int totalScore;
@@ -20,7 +20,9 @@ public class GameEngine : MonoBehaviour {
 	public Text exitLevelText;
 
 	void Start () {
-		Time.timeScale = 0.5f; 
+		//Slow the timeflow for game
+		Time.timeScale = 0.55f; 
+
 		//lifes = 3;
 		score = 0;
 		totalScore = PlayerPrefs.GetInt ("TotalScore");

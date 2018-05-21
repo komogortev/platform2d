@@ -51,4 +51,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e62afabb52d02004c9d8c66c2a961ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalScoreCount: {fileID: 0}
+  autoLoadNextLevelAfter: 0

@@ -6,17 +6,26 @@ using UnityEngine.SceneManagement;
  
 public class LevelsManager : MonoBehaviour {
 
+	//Collect UI buttons to disable while action performing
+	Button[] buttons;
 
+	//Declare key markers for UI slide actions
+	Vector3 sysMenuPos;
+	Vector3 sysMenuHiddenPos;
 
-	//	public GameObject loadingImage;
-	//public Text totalScoreCount;
-
+	//Splash screen trigger to main menu
 	public float autoLoadNextLevelAfter;
 
-	private bool isMenu = true;
-	private bool isSettingsVisible = false;
+	//Current game status flags
+	private bool isMenuScreenOn = true;
+	private bool isSettingsDialogVisible = false;
 
 	void Start () {
+		buttons = GameObject.Find("SceneCanvas").GetComponentsInChildren<Button>(true);
+		 
+		sysMenuPos = new Vector3 (Screen.width * 0.5f, Screen.height * 0.5f, 0);
+		sysMenuHiddenPos = new Vector3 (Screen.width * 0.5f, Screen.height * 1.5f, 0);
+ 
 		if (SceneManager.GetActiveScene().name == "00 Splash") {
 			Invoke ("LoadMainMenu", autoLoadNextLevelAfter); 	
 
@@ -38,56 +47,70 @@ public class LevelsManager : MonoBehaviour {
 		
 
 	public void ToggleSettings () {
-		isSettingsVisible = !isSettingsVisible;
+
+		isSettingsDialogVisible = !isSettingsDialogVisible;
 
 		//find objects that move
-		GameObject systemMenu = GameObject.Find ("SystemMenu");
-		Vector3 menuMarker = new Vector3 (250, 120, 0);
-		Vector3 sysMenuMarker = new Vector3 (250, 400, 0);
+		GameObject systemMenu = GameObject.Find ("MenuPanel");
 
-		StartCoroutine(SlideMenu(systemMenu, isSettingsVisible == true ? menuMarker : sysMenuMarker, .2f));
+		StartCoroutine(SlideObject(systemMenu, isSettingsDialogVisible == true ? sysMenuPos : sysMenuHiddenPos, .2f));
 	}
 
 	//Toggle to Character room
 	public void ToggleRoom () {
-		isMenu = !isMenu;
+		 
+		isMenuScreenOn = !isMenuScreenOn;
 
 		//find objects that move
 		GameObject menuScene = GameObject.Find ("MenuScene");
-		GameObject scenesNav = GameObject.Find ("ScenesNav");
-		//set menu positions
-		Vector3 menuMarker = new Vector3 (0, 0, 0);
-		Vector3 roomMarker = new Vector3 (0, 10, 0);
-		//@Todo init canvas values for nav
-		Vector3 navMenu = new Vector3 (309.5f, 174f, 0f);
-		Vector3 navRoom = new Vector3 (309.5f, 664f, 0f);
+		GameObject scenesSlider = GameObject.Find ("ScenesSlider");
+ 
+		//Room position
+		Vector3 menuScenePos = new Vector3 (0, 0, 0);
+		Vector3 roomScenePos = new Vector3 (0, 10, 0);
 
+		//@Scenes Slider
+		Vector3 scenesSliderPos =  new Vector3 (Screen.width * 0.5f, Screen.height * 0.2f, 0);
+		Vector3 scenesSliderHidden =  new Vector3 (Screen.width * 0.5f, Screen.height * 1.5f, 0);
+
+		 
 		//slide menu/room to camera view position
-		StartCoroutine(SlideMenu(menuScene, isMenu == true ? menuMarker : roomMarker, .2f));
-		StartCoroutine(SlideMenu(scenesNav, isMenu == true ? navMenu : navRoom, .2f));
-	}
+		StartCoroutine(SlideObject(menuScene, isMenuScreenOn == true ? menuScenePos : roomScenePos, .2f));
+		StartCoroutine(SlideObject(scenesSlider, isMenuScreenOn == true ? scenesSliderPos : scenesSliderHidden, .2f));
+ 	}
 
+	private IEnumerator SlideObject(GameObject obj, Vector3 destination, float delta) {
+		//disable all the buttons
+		ToggleUI ();
+		Debug.Log (obj.name);
+		//freeze scene if  menu is visible
+		Time.timeScale = isSettingsDialogVisible ? 0f : 0.55f;
 
-	private IEnumerator SlideMenu(GameObject scene, Vector3 location, float delta) {
 		float closeEnough = .2f;
-		float distance = (scene.transform.position - location).magnitude;
-		  
+		float distance = (obj.transform.position - destination).magnitude;
+
 		while (distance >= closeEnough) {
-			scene.transform.position = Vector3.Slerp (scene.transform.position, location, delta);
+			obj.transform.position = Vector3.Slerp (obj.transform.position, destination, delta);
 			yield return new WaitForEndOfFrame ();
-			//Update distance to final location;	
-			distance = (scene.transform.position -	 location).magnitude;
+			//Update distance to final destination;	
+			distance = (obj.transform.position - destination).magnitude;
 		}
 
-		//final moving touch from closeEnough to final location
-		scene.transform.position = location;
+		//final moving touch from closeEnough to final destination
+		obj.transform.position = destination;
 
+
+		//enable all the bubttons
+		ToggleUI ();
+	}
+		
+	private void ToggleUI () {
+		foreach(Button obj in buttons) {
+			obj.GetComponent<Button>().interactable = !obj.GetComponent<Button>().interactable;
+		}
 	}
 
-
-
-
-	public void Quit(){
+	public void Quit () {
 		Application.Quit ();
 	}
 

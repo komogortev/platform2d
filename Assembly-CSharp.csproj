@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\LevelsManager.cs" />
      <Compile Include="Assets\Scripts\LoseCollaider.cs" />
      <Compile Include="Assets\Scripts\playerController.cs" />
+     <Compile Include="Assets\Scripts\RoomEngine.cs" />
      <Compile Include="Assets\Scripts\ScrollRectSnap.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />
      <None Include="Assets\Sprites\_Gui\ColorfulButtons\Credits.txt" />
