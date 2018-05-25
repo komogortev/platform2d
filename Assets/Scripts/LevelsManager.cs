@@ -13,6 +13,9 @@ public class LevelsManager : MonoBehaviour {
 	Vector3 sysMenuPos;
 	Vector3 sysMenuHiddenPos;
 
+	Vector3 hatsSliderPos;
+	Vector3 hatsSliderHiddenPos;
+
 	//Splash screen trigger to main menu
 	public float autoLoadNextLevelAfter;
 
@@ -32,8 +35,7 @@ public class LevelsManager : MonoBehaviour {
 			//totalScoreCount.text = "Scores: " + PlayerPrefs.GetInt("TotalScore").ToString();
 			//Debug.Log ("AA" + totalScoreCount.text);
 		}
-
-
+		 
 	}
 	   
 	public void LoadMainMenu(){
@@ -46,13 +48,12 @@ public class LevelsManager : MonoBehaviour {
 	}
 		
 
-	public void ToggleSettings () {
+	public void ToggleSettingsDialog () {
 
 		isSettingsDialogVisible = !isSettingsDialogVisible;
 
 		//find objects that move
 		GameObject systemMenu = GameObject.Find ("MenuPanel");
-
 		StartCoroutine(SlideObject(systemMenu, isSettingsDialogVisible == true ? sysMenuPos : sysMenuHiddenPos, .2f));
 	}
 
@@ -63,26 +64,31 @@ public class LevelsManager : MonoBehaviour {
 
 		//find objects that move
 		GameObject menuScene = GameObject.Find ("MenuScene");
+		GameObject hatsSlider = GameObject.Find ("MannequinSlider");
 		GameObject scenesSlider = GameObject.Find ("ScenesSlider");
  
 		//Room position
 		Vector3 menuScenePos = new Vector3 (0, 0, 0);
 		Vector3 roomScenePos = new Vector3 (0, 10, 0);
 
-		//@Scenes Slider
+		//Hats Slider position
+		hatsSliderPos = new Vector3 (Screen.width * 0.21f, Screen.height * 0.65f, 0);
+		hatsSliderHiddenPos = new Vector3 (Screen.width * 0.21f, Screen.height * -0.5f, 0);
+
+		//Scenes Slider position
 		Vector3 scenesSliderPos =  new Vector3 (Screen.width * 0.5f, Screen.height * 0.2f, 0);
 		Vector3 scenesSliderHidden =  new Vector3 (Screen.width * 0.5f, Screen.height * 1.5f, 0);
 
-		 
 		//slide menu/room to camera view position
-		StartCoroutine(SlideObject(menuScene, isMenuScreenOn == true ? menuScenePos : roomScenePos, .2f));
-		StartCoroutine(SlideObject(scenesSlider, isMenuScreenOn == true ? scenesSliderPos : scenesSliderHidden, .2f));
+		StartCoroutine(SlideObject(menuScene, isMenuScreenOn ? menuScenePos : roomScenePos, .2f));
+		StartCoroutine(SlideObject(hatsSlider, !isMenuScreenOn ? hatsSliderPos : hatsSliderHiddenPos, .2f));
+		StartCoroutine(SlideObject(scenesSlider, isMenuScreenOn ? scenesSliderPos : scenesSliderHidden, .2f));
  	}
 
 	private IEnumerator SlideObject(GameObject obj, Vector3 destination, float delta) {
 		//disable all the buttons
 		ToggleUI ();
-		Debug.Log (obj.name);
+
 		//freeze scene if  menu is visible
 		Time.timeScale = isSettingsDialogVisible ? 0f : 0.55f;
 
@@ -98,8 +104,7 @@ public class LevelsManager : MonoBehaviour {
 
 		//final moving touch from closeEnough to final destination
 		obj.transform.position = destination;
-
-
+		 
 		//enable all the bubttons
 		ToggleUI ();
 	}

@@ -6,33 +6,34 @@ public class RoomEngine : MonoBehaviour {
 
 	public GameObject wardrobe;
  	RectTransform wardrobeSlider;
-	private bool isOpen;
+	private bool isWardrobeOpen;
+
+	 
 
 	// Use this for initialization
 	void Start () {
-		isOpen = false;
- 
-		//set starting state for outfit slider
+		isWardrobeOpen = false;
+		 
+		//set starting state for gear slider
 		wardrobeSlider = GameObject.Find ("WardrobeSlider").GetComponent<RectTransform>();
-		wardrobeSlider.sizeDelta = new Vector2 (isOpen ? 300f : 0, 300f);
-
+		wardrobeSlider.sizeDelta = new Vector2 (isWardrobeOpen ? 300f : 0, 300f);
+		 
 	}
 	 
 
 	public void ToggleWardrobe () {
-		isOpen = !isOpen;
+		isWardrobeOpen = !isWardrobeOpen;
  		//wardrobe.GetComponent<Animation> ().Play ();
 
-		wardrobe.GetComponent<Animation>()["wardrobe_open"].speed = isOpen ? 1 : -1;
+		wardrobe.GetComponent<Animation>()["wardrobe_open"].speed = isWardrobeOpen ? 1 : -1;
 
-		if (isOpen)
+		if (isWardrobeOpen)
 			wardrobe.GetComponent<Animation>()["wardrobe_open"].time = wardrobe.GetComponent<Animation>()["wardrobe_open"].length;
 
 		wardrobe.GetComponent<Animation>().Play("wardrobe_open");
 
-
 		//hide/reveal outfit slider
-		wardrobeSlider.sizeDelta = new Vector2 (isOpen ? 300f : 0, 300f);
+		wardrobeSlider.sizeDelta = new Vector2 (isWardrobeOpen ? 300f : 0, 300f);
  
 	}
 
@@ -40,12 +41,17 @@ public class RoomEngine : MonoBehaviour {
 
 	}
 
-	void ScrollWardrobeInventory () {
-	
+	void FetchHatsInventory () {
+
 	}
 
-	void ApplySelectedItem () {
-	
+
+	public void ApplySelectedGear (int index) {
+		PlayerPrefs.SetInt ("gear", index);
+	}
+
+	public void ApplySelectedHat (int index) {
+		PlayerPrefs.SetInt ("hat", index);
 	}
 
 
